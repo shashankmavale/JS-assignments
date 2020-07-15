@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Day 1 Assignments</title>
+</head>
+<body>
+    <h1>Assignment 2</h1>
+    <h3>Q.2.</h3>
+    <p>Write the difference between var, let and const with code examples</p>
+    
+    <h4>Types are variables are:</h4>
+    <ul>
+        <li>var</li>
+        <li>let</li>
+        <li>const</li>
+    </ul>
+    <p>note. please read copmments in code to see explanation.</p>
+    <ol>
+        <li><b>var</b></li>
+        e.g.<br> 
+        <script>
+            var x=5;
+            document.write(x,'<br/>');
+            var x=2;
+            document.write(x,'<br/>')
+            /*By using var we can able to use different outputs for same variables at different locations of same page.*/
+        </script>
+        
+        <li><b>let</b></li>
+        e.g.<br>
+        <script>
+            let x=5;
+            let x=2;
+            document.write(x,'<br/>');/*this will not show any output because we cannot use let twice for same variable.But we can change the variable value without providing let.*/
+        </script>
+        <script>
+            let y=4;
+            y=3;
+            document.write(y,'<br/>');/* here we can see if we donot provide let twice it will show an output.*/
+        </script>
+        <li><b>const</b></li>
+        e.g.<br>
+        <script>
+            const x=5;
+            const x=2;
+            document.write(x,'<br/>');/* here also we are not able to see the output as by using const we are making the varialble value fixed. and we are not able to change it.
+        </script>
+         <script>
+            const y=4;
+            y=3;
+            document.write(y,'<br/>');/* this will be not going to work here!! value of const variable will remain fix.
+        </script>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<html>
+<head>
+    <title>Day 1 Assignment</title>
+</head>
+<body>
+    <h1>Assignment 1</h1>
+    <h3> Q.1.</h3>
+    <p>Explore and explain various methods in console function.</p>
+    
+    <h3>Various console methods are...</h3>
+    <ul>
+        <li>console.log()</li>
+        <li>console.error()</li>
+        <li>console.warn()</li>
+        <li>console.clear()</li>
+        <li>console.time() and console.tiemEnd()</li>
+        <li>console.table()</li>
+        <li>console.count()</li>
+        <li>console.group() and console.groupEnd()</li>
+    </ul>
+    
+    <h4>console.log()</h4>
+    <p>It is used to print any output inside console tab</p>
+    <p>e.g.<br><span>To see e.g. press f12 and go to console</span>
+        <script>console.log("Hello World");</script>
+    </p>
+    <br>
+    <h4>console.error()</h4>
+    <p>It is used to print error message inside console tab.</p>
+    <p>e.g.<br><span>To see e.g. press f12 and go to console</span>
+        <script>console.error("Wrong statement");</script>
+    </p>
+    <br>
+    <h4>console.warn()</h4>
+    <p>It is used to print warning message inside console tab</p>
+    <p>e.g.<br><span>To see e.g. press f12 and go to console</span>
+        <script>console.warn("Warning!!");</script>
+    </p>
+    <br>
+    <h4>console.clear()</h4>
+    <p>It is used to clear the console tab</p>
+    <p>e.g.<br>
+    console.clear();
+    <br> it is not shown in console tab because above functions will be cleared if this is shown there.
+    </p>
+    <br>
+    <h4>console.time() or console.timeEnd()</h4>
+    <p>It is used to know the time spent by a block on a particular function.</p>
+    <p>e.g.<br><span>To see e.g. press f12 and go to console</span>
+        <script>
+            console.time('random')
+            let a=function(){
+                console.log("Hello World");
+            }
+            a();
+            console.timeEnd('random');
+            </script>
+    </p>
+    <br>
+    <h4>console.table()</h4>
+    <p>by this we can able to make table inside a console.</p>
+    <p>e.g.<br><span>To see e.g. press f12 and go to console</span>
+        <script>console.table({'a':1,'b':2});</script>
+    </p>
+    <br>
+    <h4>console.count()</h4>
+    <p>It is used to count the number that the function hit by this counting method</p>
+    <p>e.g.<br><span>To see e.g. press f12 and go to console</span>
+        <script>for(let i=0;i<10;i++){
+                console.count(i);
+            }</script>
+    </p>
+    <br>
+    <h4>console.group()and console.groupEnd()</h4>
+    <p>This allows us to group contents in a seperate block,which will be indented.</p>
+    <p>e.g.<br><span>To see e.g. press f12 and go to console</span>
+        <script>
+            console.group('first'); 
+            console.warn('warning!'); 
+            console.error('Some error'); 
+            console.log('hello'); 
+            console.groupEnd('first'); 
+            console.log('new');</script>
+    </p>
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,193 @@
+<html>
+<head>
+    <title>Day 2 Assignment</title>
+</head>
+<body>
+    <h1>Assignment 2</h1>
+    <h3>Q.3.</h3>
+    <p>Explain with examples the remaining methods of String and Array</p>
+    
+    <h2>String methods</h2>
+    <ol>
+        <li><b>String length</b></li><br>
+        returns the length of a string
+        <script>
+            var a="Hello world!";
+            console.log(a.length);
+        </script>
+        
+        <li><b>Finding a String in a String</b></li><br>
+        The <i>indexOf()</i> method returns the index of (the position of) the first occurrence of a specified text in a string<br>
+        <script>
+            var b="finding an index!";
+            console.log(b.indexOf("index"));
+        </script>
+        The <i>lastIndexOf()</i> method returns the index of the last occurrence of a specified text in a string
+        <script>
+            console.log(b.lastIndexOf("index"));
+        </script>
+        
+        <li><b>Searching for a String in a String</b></li><br>
+        The search() method searches a string for a specified value and returns the position of the match
+        <script>
+           console.log(b.search("index")); 
+        </script>
+        /*The difference between indexOf() and search() are - the search() method cannot take a second start posuition argument. and the indexOf() method cannot take powerful search values.*/
+        
+        <li><b> slice() Method</b></li><br>
+        slice() extracts a part of a string and returns the extracted part in a new string.
+        <script>
+            var d="red,yellow,green";
+            console.log(d.slice(4,10));
+            console.log(d.slice(-12,-6));
+        </script>
+        
+        <li><b>substring() Method</b></li><br>
+        substring() is similar to slice().
+        The difference is that substring() cannot accept negative indexes.
+        <script>
+            console.log(d.substring(4,10));
+        </script>
+        
+        <li><b>substr() Method</b></li><br>
+        substr() is similar to slice().
+        The difference is that the second parameter specifies the length of the extracted part.
+        <script>
+            console.log(d.substr(4,6));
+        </script>
+        
+        <li><b>replace() method</b></li><br>
+        replaces a specified value with another value in a string
+        <script>
+            var e="Android Oreo";
+            console.log(e.replace("Oreo","Pie"));
+        </script>
+        
+        <li><b>Upper and Lower Case</b></li><br>
+        A string is converted to upper case with <i>toUpperCase()</i>
+        A string is converted to lower case with <i>toLowerCase()</i>
+        <script>
+            var f="Life is Awesome!"
+            console.log(f.toUpperCase());
+            console.log(f.toLowerCase());
+        </script>
+        
+        <li><b>concat() Method</b></li></br> 
+        joins two or more strings
+        <script>
+            var g="hello"
+            var h="World!"
+            console.log(g.concat(" ",h));
+        </script>
+        
+        <li><b>trim() method</b></li><br>
+        removes whitespace from both sides of a string 
+        <script>
+            var i="   Hello wrorld!   ";
+            console.log(i);
+            console.log(i.trim());
+        </script>
+        
+        <li><b>charAt() Method</b></li><br>
+        returns the character at a specified index (position) in a string
+        <script>
+            var j="You can't see me!"
+            console.log(j.charAt(0));
+        </script>
+        
+        <li><b>charCodeAt() Method</b></li>
+        returns the unicode of the character at a specified index in a string  
+        <script>
+            console.log(j.charCodeAt(0));
+        </script>
+        
+        <li><b>split() method</b></li><br>
+        A string can be converted to an array with the split() method
+        <script>
+            var k="x,y,z"
+            console.log(k.split(","));
+    </script>
+    </ol>
+    <h2>Array Methods</h2>
+        <ol>
+            <li><b>toString() method</b></li><br>
+            converts an array to a string
+            <script>
+                var colors=["red","blue","pink"];
+                console.log(colors.toString());
+            </script>
+            
+            <li><b>pop() method</b></li><br>
+            removes the last element from an array
+            <script>
+                var l=colors.pop()
+                console.log(colors);
+            </script>
+            
+            <li><b>push() method</b></li><br>
+            adds a new element to an array (at the end)
+            <script>
+                var m=colors.push("green")
+                console.log(colors);
+            </script>
+            
+            <li><b>shift()</b></li><br>
+            removes the first array element and "shifts" all other elements to a lower index.
+            <script>
+                var n=colors.shift()
+                console.log(colors);
+            </script>
+            
+            <li><b>unshift() method</b></li><br>
+            adds a new element to an array (at the beginning), and "unshifts" older elements
+            <script>
+                var o=colors.unshift("white")
+                console.log(colors);
+            </script>
+            
+            <li><b>Changing Elements</b></li><br>
+            Array elements are accessed using their index number
+            <script>
+                colors[0]="Black";
+                console.log(colors);
+            </script>
+            
+            <li><b>delete operator</b></li><br>
+            Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete
+            <script>
+                delete colors[1];
+                console.log(colors);
+                //Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+                colors[1]="voilet";
+            </script>
+            
+            <li><b>splice() method</b></li><br>
+            The splice() method can be used to add new items to an array or to remove elements
+            <script>
+                colors.splice(1,1,"grey","orange");
+                /*The first parameter (1) defines the position where new elements should be added (spliced in).
+                The second parameter (1) defines how many elements should be removed.
+                The rest of the parameters ("grey" , "orange") define the new elements to be added.
+                The splice() method returns an array with the deleted items*/
+                console.log(colors);
+            </script>
+            
+            <li><b>concat() method</b></li><br>
+             creates a new array by merging (concatenating) existing arrays
+             <script>
+                var colors1=["red","green"];
+                var colors2=["blue","white"];
+                console.log(colors1.concat(colors2));
+             </script>
+             
+            <li><b>slice() method</b></li><br>
+            The slice() method slices out a piece of an array into a new array.
+            <script>
+                var game=["ludo","chess","carrom","cards"]
+                console.log(game);
+                var game1=game.slice(1,3);
+                console.log(game1);
+            </script>   
+        </ol>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Day 3 Assignments</title>
+</head>
+<body>
+    <h1>Assignment 3</h1>
+    <h3>Q.3.</h3>
+    Write a program to take marks as input from the user and grade him accordingly. Use Conditional statements. Also the same code using switch or ternary.
+    
+    <script>
+        var marks_obtained =prompt("Enter your marks between 0-100");
+        console.log(`Input: '${marks_obtained}' marks`);
+        //Using Conditional Statements
+        if(marks_obtained<40){
+            console.log(`Output: Marks are '${marks_obtained}' and grade is F`);
+        }else if(marks_obtained>=40 && marks_obtained<50){
+            console.log(`Output: Marks are '${marks_obtained}' and grade is E`);
+        }else if(marks_obtained>=50 && marks_obtained<55){
+            console.log(`Output: Marks are '${marks_obtained}' and grade is D`);
+        }else if (marks_obtained>=55 && marks_obtained<60){
+            console.log(`Output: Marks are '${marks_obtained}' and grade is D+`);
+        }else if (marks_obtained>=60 && marks_obtained<65){
+            console.log(`Output: Marks are '${marks_obtained}' and grade is C`);
+        }else if (marks_obtained>=65 && marks_obtained<70){
+            console.log(`Output: Marks are '${marks_obtained}' and grade is C+`);
+        }else if (marks_obtained>=70 && marks_obtained<75){
+            console.log(`Output: Marks are '${marks_obtained}' and grade is B`);
+        }else if (marks_obtained>=75 && marks_obtained<80){
+            console.log(`Output: Marks are '${marks_obtained}' and grade is B+`);
+        }else if (marks_obtained>=80 && marks_obtained<85){
+            console.log(`Output: Marks are '${marks_obtained}' and grade is A-`);
+        }else if (marks_obtained>=85 && marks_obtained<90){
+            console.log(`Output: Marks are '${marks_obtained}' and grade is A`);
+        }else if (marks_obtained>=90 && marks_obtained<=100){
+            console.log(`Output: Marks are '${marks_obtained}' and grade is A+`);
+        }
+        //Ternary Operator
+        let result =
+            marks_obtained < 40
+                ? `Marks are '${marks_obtained}' and grade is 'F'`
+                : marks_obtained >= 40 && marks_obtained < 50
+                ? `Marks are '${marks_obtained}' and grade is 'E'`
+                : marks_obtained >= 50 && marks_obtained < 55
+                ? `Marks are '${marks_obtained}' and grade is 'D'`
+                : marks_obtained >= 55 && marks_obtained < 60
+                ? `Marks are '${marks_obtained}' and grade is 'D+'`
+                : marks_obtained >= 60 && marks_obtained < 65
+                ? `Marks are '${marks_obtained}' and grade is 'C'`
+                : marks_obtained >= 65 && marks_obtained < 70
+                ? `Marks are '${marks_obtained}' and grade is 'C+'`
+                : marks_obtained>= 70 && marks_obtained < 75
+                ? `Marks are '${marks_obtained}' and grade is 'B'`
+                : marks_obtained >= 75 && marks_obtained < 80
+                ? `Marks are '${marks_obtained}' and grade is 'B+'`
+                : marks_obtained >= 80 && marks_obtained < 85
+                ? `Marks are '${marks_obtained}' and grade is 'A-'`
+                : marks_obtained >= 85 && marks_obtained < 90
+                ? `Marks are '${marks_obtained}' and grade is 'A'`
+                : marks_obtained >= 90 && marks_obtained <= 100
+                ? `Marks are '${marks_obtained}' and grade is 'A+'`
+                : `Marks are '${marks_obtained}' and pls type between 0-100`;
+        console.log(result);
+    </script>
+    
+</body>
+</html>

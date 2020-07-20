@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Assignments</title>
+</head>
+<body>
+    <h2>Day 4 Q.8.</h2>
+    Replace Function Expressions with arrow functions in the code below:
+    function ask(question, yes, no) {
+        if (confirm(question)) yes()
+        else no();
+    }
+
+    ask(
+        "Do you agree?",
+        function() { alert("You agreed.")}
+        fonction() { alert("You canceled the execution.")}
+    );
+
+    <script>           
+        let ask =(question,yes,no) => (confirm(question)) ? yes() : no();
+        ask("Do you agree?",()=>alert("You agreed"),()=>alert("You canceled the execution."))
+    </script>
+</body>
+</html>

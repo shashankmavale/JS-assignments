@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Day 5 Q.2.</h2>
+
+    Create a Class User with properties as name, age & email.
+    He can login and logout
+    Create another class Moderator which has all the features of User, plus additional functionality to Add
+    coins and remove coins.
+    Create one more class Admin which has all the features of Moderator plus additional features like add a
+    Course and delete a particular course for a user
+
+    <script>
+        class User {
+            constructor(name,age,email){
+                this.name = name;
+                this.age = age;
+                this.email = email;
+                this.Coins = 0;
+                this.courses = [];
+            } 
+
+            logIn(){
+                console.log(`${this.name} Logged In!`);
+            }
+
+            logOut(){
+                console.log(`${this.name} Logged Out!`);
+            }
+            
+        }
+        class Moderator extends User {
+        
+            addCoins(user){
+                    user.Coins++;
+                    console.log(`${user.name} has ${user.Coins} coin`)
+                    return user;
+                }
+
+            removeCoins(user){
+                    user.Coins--;
+                    console.log(`${user.Coins} coin removed from ${user.name}'s account`)
+                    return this;
+                }
+            }
+
+        class Admin extends Moderator {
+            
+            addCourse(user,course){
+            user.courses.push(course);
+            console.log(user);
+            }
+
+            deleteCourse(user,course){
+                user.courses.pull(course);
+                console.log(user);
+            }
+        }
+
+
+        let user1 = new User('Shashank',21,'s@gmail.com')
+        let mod = new Moderator('Jhon',40,'j@gmail.com')
+        let admin = new Admin('Kane',55,'k@gmail.com')
+
+
+        user1.logIn();
+        mod.addCoins(user1);
+        mod.addCoins(user1);
+        admin.addCourse(user1,'JAvascript');
+        mod.removeCoins(user1);
+        admin.addCourse(user1,'Bootstrap');
+        user1.logOut();
+    </script>
+
+</body>
+</html>
